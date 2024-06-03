@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bca5ejjeosyuj"]
+
+[ext_resource type="Script" path="res://Piezas.gd" id="1_hoqiy"]
+[ext_resource type="Texture2D" uid="uid://b2hsjg73yksfn" path="res://Piezas/Piezas negras/Rey negro.png" id="2_40d4d"]
+
+[node name="Piezas" type="Node2D"]
+script = ExtResource("1_hoqiy")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(69, 115.5)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("2_40d4d")
+expand_mode = 1
+
+[connection signal="gui_input" from="Icon" to="." method="_on_icon_gui_input"]

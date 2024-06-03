@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjf1p6snv8xdj"]
+
+[ext_resource type="Script" path="res://casilla.gd" id="1_aiold"]
+
+[node name="slot" type="ColorRect"]
+custom_minimum_size = Vector2(77, 77)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0)
+script = ExtResource("1_aiold")
+
+[node name="Filter" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(77, 77)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 0, 0, 0)

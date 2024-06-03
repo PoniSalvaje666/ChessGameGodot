@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjx8776s5gnts"]
+
+[ext_resource type="PackedScene" uid="uid://cipf28piirp1v" path="res://Character.tscn" id="1_e407e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ks52i"]
+size = Vector3(7.91476, 8.83471, 0.898427)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(41.6402, 0.27702, 35.2016)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_e407e")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238245, 5.01749, 0.0836576)
+shape = SubResource("BoxShape3D_ks52i")

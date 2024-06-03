@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnqvxl46vgrov"]
+
+[ext_resource type="Texture2D" uid="uid://yaajdq3e4gi" path="res://Fondos/fondo tablero.png" id="1_3fgc6"]
+[ext_resource type="Script" path="res://TableroGUI.gd" id="1_loekf"]
+[ext_resource type="Texture2D" uid="uid://cphv7jsv4kuo6" path="res://Tablero/tablero chess 4k.png" id="2_y0j3a"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_loekf")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -662.0
+offset_top = -336.0
+offset_right = 662.0
+offset_bottom = 336.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3fgc6")
+expand_mode = 1
+
+[node name="ChessBoard(IMAGE)" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -336.0
+offset_right = 336.0
+offset_bottom = 336.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_y0j3a")
+expand_mode = 5
+
+[node name="BoardGrid" type="GridContainer" parent="ChessBoard(IMAGE)"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -308.0
+offset_right = 308.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.0
+offset_top = -63.0
+offset_right = -355.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TEST"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
